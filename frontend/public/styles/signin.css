@@ -1,0 +1,65 @@
+#signin {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--card-bg, --background);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary, #222);
+}
+
+#signin h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: var(--primary, -primary-hover);
+}
+
+#signinForm input[type="text"],
+#signinForm input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1.5px solid var(--border, --card-bg);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#signinForm input[type="text"]:focus,
+#signinForm input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary, -primary-hover);
+  box-shadow: 0 0 6px var(--primary, -primary-hover);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-bottom: 12px;
+  display: block;
+  min-height: 16px;
+}
+
+#signinForm button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary, --primary-hover);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signinForm button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+#signinForm br {
+  display: none; /* Hide <br> since margin handles spacing */
+}

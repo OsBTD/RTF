@@ -1,0 +1,183 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left (Menu Icon) */
+#left .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+#left .material-symbols-outlined:hover {
+  color: var(--primary);
+}
+
+/* Center (Logo) */
+#center img {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Right (Profile Section) */
+#right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#profile {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#profile-icon {
+  font-size: 30px;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+#profile-icon:hover {
+  color: var(--primary);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 230px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none; /* hidden by default */
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#user-info {
+  position: sticky;
+  top: 0;
+  /* background: var(--background); */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+#user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#user-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#uname {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#uemail {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.dropdown a, 
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  background: var(--background);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: var(--card-bg);
+}
+
+#logout:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.dropdown.show {
+  display: flex;
+}
+
+/* === DARK MODE TOGGLE CSS - KEEP EXACTLY AS YOU HAVE IT === */
+/* From Uiverse.io by vinodjangid07 */ 
+/* To hide the checkbox */
+#checkboxInput {
+  display: none;
+}
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 23px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 20px;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+.toggleSwitch:hover {
+  color: var(--primary);
+}
+
+.toggleSwitch::after {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  left: 3px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition-duration: .2s;
+  box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+  border: 5px solid white;
+}
+
+#checkboxInput:checked+.toggleSwitch::after {
+  transform: translateX(100%);
+  transition-duration: .2s;
+  background-color: white;
+}
+/* Switch background change */
+#checkboxInput:checked+.toggleSwitch {
+  background-color: rgb(148, 118, 255);
+  transition-duration: .2s;
+}

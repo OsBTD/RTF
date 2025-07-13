@@ -1,0 +1,75 @@
+#signup {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary, #222);
+}
+
+#signup h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: var(--primary, #5a2aeb);
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="date"],
+#signupForm input[type="password"],
+#signupForm select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  border: 1.5px solid var(--border, #ccc);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#signupForm input[type="text"]:focus,
+#signupForm input[type="email"]:focus,
+#signupForm input[type="date"]:focus,
+#signupForm input[type="password"]:focus,
+#signupForm select:focus {
+  outline: none;
+  border-color: var(--primary, #5a2aeb);
+  box-shadow: 0 0 6px var(--primary, #5a2aeb);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-bottom: 12px;
+  display: block;
+  min-height: 16px;
+}
+
+#signupForm button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary, #5a2aeb);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signupForm button[type="submit"]:hover {
+  background-color: #4623b5;
+}
+
+#signupForm br {
+  display: none; /* Hide the <br> tags since spacing is handled by margin */
+}
+
+
+
+

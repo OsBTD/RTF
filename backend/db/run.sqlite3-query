@@ -1,0 +1,5 @@
+-- database: /home/asaadane/real-time-forum/backend/db/app.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+INSERT OR IGNORE INTO Categories (name, description, icon) VALUES (?, ?, ?)

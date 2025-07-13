@@ -1,0 +1,78 @@
+:root {
+  /* ===== Light Mode Colors ===== */
+  --background: #FAFAFF;
+  --text-primary: #2C2C2C;
+  --text-secondary: #6B6B6B;
+  --primary: #8C52FF;
+  --primary-hover: #732DDC;
+  --accent: #B388FF;
+  --card-bg: #FFFFFF;
+  --border: #E4E4E4;
+}
+
+[data-theme="dark"] {
+  /* ===== Dark Mode Colors ===== */
+  --background: #121212;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --primary: #8C52FF;
+  --primary-hover: #A06EFF;
+  --accent: #B388FF;
+  --card-bg: #1E1E1E;
+  --border: #333333;
+}
+
+/* Make scrollbar thinner, darker */ 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.7);
+  border-radius: 6px;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+}

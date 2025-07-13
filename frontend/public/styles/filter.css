@@ -1,0 +1,92 @@
+#categories-container {
+  width: 280px;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  border-radius: 6px;
+
+  flex-direction: column;
+  gap: 12px;
+  height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  position: fixed;         /* fixed so it slides over content */
+  transform: translateX(-105%);  /* hide sidebar off to the left */
+  transition: transform 0.4s ease-in-out;
+  z-index: 1000;           /* make sure it sits above other content */
+}
+
+#categories-container.show {
+  transform: translateX(0);
+}
+
+
+.category-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.category-card:hover,
+.category-card:focus {
+  background-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(140, 82, 255, 0.3);
+  color: #fff;
+}
+
+.category-card.selected {
+  background-color: var(--primary);
+  border-color: var(--primary-hover);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(115, 45, 220, 0.5);
+}
+
+.category-card.selected:hover,
+.category-card.selected:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: 0 6px 16px rgba(160, 110, 255, 0.6);
+}
+
+/* Icon styles */
+.category-card > .material-symbols-outlined {
+  font-size: 28px;             /* icon size */
+  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.category-card.selected > .material-symbols-outlined,
+.category-card:hover > .material-symbols-outlined,
+.category-card:focus > .material-symbols-outlined {
+  color: #fff;
+}
+
+/* Text container */
+.category-card h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.category-card p {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* When selected or hovered, make description text lighter */
+.category-card.selected p,
+.category-card:hover p,
+.category-card:focus p {
+  color: #eee;
+}
